@@ -27,8 +27,3 @@ public partial class LabelUpdate : Label
 		Text = newValue;
 	}
 }
-
-
-
-
-

@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfb2dtloylg2f"]
+[gd_scene load_steps=4 format=3 uid="uid://dfb2dtloylg2f"]
 
-[ext_resource type="Script" path="res://slider.cs" id="1_u6y32"]
-[ext_resource type="Script" path="res://TexListener.cs" id="2_1apqa"]
-[ext_resource type="Script" path="res://LabelUpdate.cs" id="2_cextb"]
-[ext_resource type="Texture2D" uid="uid://bvkkxi3470k4a" path="res://images/s10_a3.5_iso100.jpg" id="2_lwdhm"]
+[ext_resource type="Script" uid="uid://bbi6gtk325et8" path="res://slider.cs" id="1_u6y32"]
+[ext_resource type="Script" uid="uid://m7c5xethb1jt" path="res://TexListener.cs" id="2_1apqa"]
+[ext_resource type="Script" uid="uid://q301gssm44jx" path="res://LabelUpdate.cs" id="2_cextb"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -23,6 +22,8 @@ grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="HSplitContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.8
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 5
 
@@ -45,16 +46,16 @@ text = "Shutter Speed: "
 
 [node name="Spacer" type="Control" parent="HSplitContainer/MarginContainer/VBoxContainer/ssControlContainer/SS Labels"]
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="ss" type="Label" parent="HSplitContainer/MarginContainer/VBoxContainer/ssControlContainer/SS Labels"]
 layout_mode = 2
+size_flags_horizontal = 3
 script = ExtResource("2_cextb")
 
 [node name="ss" type="HSlider" parent="HSplitContainer/MarginContainer/VBoxContainer/ssControlContainer"]
 layout_mode = 2
 script = ExtResource("1_u6y32")
-values = PackedStringArray("10", "20", "30", "60", "125", "400", "640", "1000", "3200")
+values = PackedStringArray("4", "8", "15", "30", "60", "125", "250", "500", "640", "1000", "2000", "4000")
 
 [node name="Control" type="Control" parent="HSplitContainer/MarginContainer/VBoxContainer/ssControlContainer"]
 layout_mode = 2
@@ -73,16 +74,16 @@ text = "Aperture:"
 
 [node name="Spacer" type="Control" parent="HSplitContainer/MarginContainer/VBoxContainer/apertureControlContainer/A Labels"]
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="a" type="Label" parent="HSplitContainer/MarginContainer/VBoxContainer/apertureControlContainer/A Labels"]
 layout_mode = 2
+size_flags_horizontal = 3
 script = ExtResource("2_cextb")
 
 [node name="aperture" type="HSlider" parent="HSplitContainer/MarginContainer/VBoxContainer/apertureControlContainer"]
 layout_mode = 2
 script = ExtResource("1_u6y32")
-values = PackedStringArray("1.8", "2", "2.8", "3.5", "4.5", "5.6", "8", "11", "18")
+values = PackedStringArray("1.8", "2.5", "3.5", "5", "8", "10", "14", "20")
 
 [node name="isoControlContainer" type="VBoxContainer" parent="HSplitContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -98,10 +99,10 @@ text = "ISO:"
 
 [node name="Spacer" type="Control" parent="HSplitContainer/MarginContainer/VBoxContainer/isoControlContainer/ISO Labels"]
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="iso" type="Label" parent="HSplitContainer/MarginContainer/VBoxContainer/isoControlContainer/ISO Labels"]
 layout_mode = 2
+size_flags_horizontal = 3
 script = ExtResource("2_cextb")
 
 [node name="iso" type="HSlider" parent="HSplitContainer/MarginContainer/VBoxContainer/isoControlContainer"]
@@ -117,7 +118,6 @@ size_flags_stretch_ratio = 4.0
 
 [node name="TextureRect" type="TextureRect" parent="HSplitContainer/PanelContainer"]
 layout_mode = 2
-texture = ExtResource("2_lwdhm")
 expand_mode = 5
 stretch_mode = 4
 script = ExtResource("2_1apqa")

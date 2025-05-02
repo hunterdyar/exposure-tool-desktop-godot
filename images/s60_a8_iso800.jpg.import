@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8mkmo4i4rhqd"
+uid="uid://pp81cksn6yy1"
 path="res://.godot/imported/s60_a8_iso800.jpg-4961c7c7d7a682ba75e7de4eaf8c1486.ctex"
 metadata={
 "vram_texture": false
@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/s60_a8_iso800.jpg-4961c7c7d7a682ba75e7de4eaf8
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
